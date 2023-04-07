@@ -4,4 +4,5 @@ Done the require components setup
 
 
 AWS Configure
+
 aws sts get-caller-identity
