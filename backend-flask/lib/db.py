@@ -1,7 +1,6 @@
 from psycopg_pool import ConnectionPool
 import os
 
-from lib.db import pool
 
 
 connection_url = os.getenv("CONNECTION_URL")
@@ -13,6 +12,7 @@ def query_wrap_object(template):
   {template}
   ) object_row);
   '''
+  return sql
 
 def query_wrap_array(template):
   sql = '''
@@ -20,6 +20,4 @@ def query_wrap_array(template):
   {template}
   ) array_row);
   '''
-
-connection_url = os.getenv("CONNECTION_URL")
-pool = ConnectionPool(connection_url)
+  return sql
