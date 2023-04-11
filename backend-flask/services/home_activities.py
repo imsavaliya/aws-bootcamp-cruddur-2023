@@ -29,6 +29,7 @@ class HomeActivities:
           cur.execute(sql)
           # this will return a tuple
           # the first field being the data
+          #gfhgdfg
           json = cur.fetchone()
       return json[0]
       return results
